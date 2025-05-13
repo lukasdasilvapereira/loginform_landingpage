@@ -76,7 +76,88 @@ form {
     margin: auto auto;
     align-items: center;
     border: 2px solid white;
-    width: 600px;
-    height: 500px;
+    width: 500px;
+    height: 550px;
     margin-top: 70px;
+    background-color: rgba(173, 216, 230, 0.61);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    position: relative;
 }
+
+form h1 {
+    font-size: 2.5em;
+    transform: translate(0px, -80px);
+}
+
+.input-group {
+    position: relative;
+    margin: 20px auto;
+    width: 330px; /* Largura menor como na imagem */
+}
+
+/* Ícone à esquerda dentro do input */
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+/* Input estilizado */
+.input-group input {
+    width: 100%;
+    padding: 10px 10px 10px 35px; /* espaço para o ícone */
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    color: black;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Label flutuante */
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 35px; /* alinhado com o texto */
+    color: black;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+/* Quando focado ou preenchido, o label sobe */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown):valid + label {
+    top: -12px;
+    font-size: 12px;
+}
+
+.closed {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    z-index: 10;
+}
+
+.closed:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+
+
