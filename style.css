@@ -69,8 +69,8 @@ h2 {
     color: black;
 }
 
-form {
-    display: flex;
+.form-section {
+    display: none;
     flex-direction: column;
     justify-content: center;
     margin: auto auto;
@@ -90,14 +90,14 @@ form h1 {
     transform: translate(0px, -30px);
 }
 
-.input-group {
+.input-group, .group {
     position: relative;
     margin: 20px auto;
     width: 330px; /* Largura menor como na imagem */
 }
 
 /* Ícone à esquerda dentro do input */
-.input-group i {
+.input-group, .group i {
     position: absolute;
     top: 50%;
     left: 10px;
@@ -108,7 +108,7 @@ form h1 {
 }
 
 /* Input estilizado */
-.input-group input {
+.input-group, .group input {
     width: 100%;
     padding: 10px 10px 10px 35px; /* espaço para o ícone */
     background: transparent;
@@ -120,7 +120,7 @@ form h1 {
 }
 
 /* Label flutuante */
-.input-group label {
+.input-group, .group label {
     position: absolute;
     top: 10px;
     left: 35px; /* alinhado com o texto */
@@ -130,7 +130,7 @@ form h1 {
 }
 
 /* Quando focado ou preenchido, o label sobe */
-.input-group input:focus + label,
+.input-group, .group input:focus + label,
 .input-group input:not(:placeholder-shown):valid + label {
     top: -12px;
     font-size: 12px;
@@ -204,5 +204,33 @@ form h1 {
 }
 
 .regi:hover {
+    text-decoration: underline;
+}
+
+.registrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto auto;
+    align-items: center;
+    border: 2px solid white;
+    width: 500px;
+    height: 650px;
+    margin-top: 70px;
+    background-color: rgba(173, 216, 230, 0.61);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    position: relative;
+}
+
+.btn1 {
+    margin: 20px 0px;
+}
+
+.log {
+    color: blue;
+}
+
+.log:hover {
     text-decoration: underline;
 }
